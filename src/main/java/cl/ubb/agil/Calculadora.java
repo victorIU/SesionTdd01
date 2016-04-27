@@ -5,6 +5,6 @@ public Calculadora(){
 		
 	}
 	public int suma(int a,int b){
-		return 5;
+		return (a+b);
 	}
 }
