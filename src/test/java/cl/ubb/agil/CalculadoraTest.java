@@ -46,7 +46,7 @@ public class CalculadoraTest {
 		assertThat(suma, is(-15));
 	}
 	@Test
-	public void divisionDeDoceYTresEsCuatro(){
+	public void divisionDeDoceYTresEsCuatro()throws ExcepcionOperacionInvalida{
 		Calculadora calculadora=new Calculadora();
 		
 		int division=calculadora.division(12, 3);
@@ -54,7 +54,7 @@ public class CalculadoraTest {
 		assertThat(division,is(4));
 	}
 	@Test
-	public void divisionDeTreintaYSeisEsSeis(){
+	public void divisionDeTreintaYSeisEsSeis()throws ExcepcionOperacionInvalida{
 		Calculadora calculadora=new Calculadora();
 		
 		int division=calculadora.division(30, 6);
@@ -62,12 +62,19 @@ public class CalculadoraTest {
 		assertThat(division,is(6));
 	}
 	@Test (expected=ExcepcionOperacionInvalida.class)
-	public void divisionDeDiceYCeroLanzaExcepcion(){
-Calculadora calculadora=new Calculadora();
+	public void divisionDeDiceYCeroLanzaExcepcion()throws ExcepcionOperacionInvalida{
+		Calculadora calculadora=new Calculadora();
 		
 		int division=calculadora.division(12, 0);
+
+	}
+	@Test
+	public void ExpresionTresMasCuatroMasSieteEsCatorce(){
+		Calculadora calculadora=new Calculadora();
 		
-		assertThat(division,is(6));
+		int resultado = calculadora.sumarExpresion("3+4+6");
+		
+		assertThat(resultado,is(14));
 	}
 }
 
