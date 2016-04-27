@@ -61,5 +61,13 @@ public class CalculadoraTest {
 		
 		assertThat(division,is(6));
 	}
+	@Test (expected=ExcepcionOperacionInvalida.class)
+	public void divisionDeDiceYCeroLanzaExcepcion(){
+Calculadora calculadora=new Calculadora();
+		
+		int division=calculadora.division(12, 0);
+		
+		assertThat(division,is(6));
+	}
 }
 
