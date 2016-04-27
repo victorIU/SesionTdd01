@@ -8,6 +8,6 @@ public Calculadora(){
 		return (a+b);
 	}
 	public int resta(int a, int b){
-		return 127;
+		return a-b;
 	}
 }
