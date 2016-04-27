@@ -17,4 +17,14 @@ public class CalculadoraTest {
 		
 		assertThat(suma,is(5));
 	}
+	@Test
+	public void sumarMenosUnoYSiete(){
+		
+		Calculadora calculadora = new Calculadora();
+		
+		int suma=calculadora.suma(-1, 7);
+		
+		assertThat(suma,is(6));
+	}
 }
+
