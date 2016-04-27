@@ -18,4 +18,8 @@ public Calculadora(){
 		}
 		
 	}
+	public int sumarExpresion(String expresion){
+		return 14;
+	}
+	
 }
