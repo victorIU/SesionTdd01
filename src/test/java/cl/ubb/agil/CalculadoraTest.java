@@ -59,7 +59,7 @@ public class CalculadoraTest {
 		
 		int division=calculadora.division(30, 6);
 		
-		assertThat(division,is(6));
+		assertThat(division,is(5));
 	}
 	@Test (expected=ExcepcionOperacionInvalida.class)
 	public void divisionDeDiceYCeroLanzaExcepcion()throws ExcepcionOperacionInvalida{
@@ -75,6 +75,14 @@ public class CalculadoraTest {
 		int resultado = calculadora.sumarExpresion("3+4+6");
 		
 		assertThat(resultado,is(14));
+	}
+	@Test
+	public void ExpresionDosMasSeisMasOchoEsDieciseis(){
+		Calculadora calculadora=new Calculadora();
+		
+		int resultado = calculadora.sumarExpresion("2+6+8");
+		
+		assertThat(resultado,is(16));
 	}
 }
 
