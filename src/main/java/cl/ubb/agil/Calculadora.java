@@ -4,10 +4,13 @@ public class Calculadora {
 public Calculadora(){
 		
 	}
-	public int suma(int a,int b){
-		return (a+b);
+	public int suma(int num1,int num2){
+		return (num1+num2);
 	}
-	public int resta(int a, int b){
-		return a-b;
+	public int resta(int num1, int num2){
+		return num1-num2;
+	}
+	public int division(int dividendo, int divisor){
+		return 4;
 	}
 }

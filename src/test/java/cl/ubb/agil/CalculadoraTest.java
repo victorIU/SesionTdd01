@@ -8,6 +8,7 @@ import static org.junit.Assert.assertFalse;
 import static org.hamcrest.CoreMatchers.is;
 
 public class CalculadoraTest {
+	
 	@Test
 	public void sumarDosYTresEsCinco(){
 		
@@ -43,6 +44,14 @@ public class CalculadoraTest {
 		int suma=calculadora.resta(-10, 5);
 		
 		assertThat(suma, is(-15));
+	}
+	@Test
+	public void divisionDeDoceYTresEsCuatro(){
+		Calculadora calculadora=new Calculadora();
+		
+		int division=calculadora.division(12, 3);
+		
+		assertThat(division,is(4));
 	}
 }
 
