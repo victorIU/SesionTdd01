@@ -26,5 +26,14 @@ public class CalculadoraTest {
 		
 		assertThat(suma,is(6));
 	}
+	@Test
+	public void DoscientosMenosSetentaYTresEsCientoveintisiete(){
+		
+		Calculadora calculadora=new Calculadora();
+		
+		int suma=calculadora.resta(200, 73);
+		
+		assertThat(suma, is(127));
+	}
 }
 
